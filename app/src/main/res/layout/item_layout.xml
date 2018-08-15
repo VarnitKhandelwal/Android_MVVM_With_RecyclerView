@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="imageViewModel"
+            type="com.android.varnit.engineer_ai_assignment.viewmodel.ItemImageViewModel" />
+    </data>
+
+    <RelativeLayout
+        android:id="@+id/item_image"
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        android:layout_margin="5dp"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/img_place"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:adjustViewBounds="true"
+            android:background="@android:color/darker_gray"
+            tools:imageUrl="@{imageViewModel.imageUrl}"
+            android:scaleType="fitXY" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/image_gradient" />
+
+    </RelativeLayout>
+</layout>
